@@ -1,105 +1,97 @@
-=== Photo Sphere Viewer --Renders 360° panoramas shots ===
+=== Photo Sphere Viewer – Render Stunning 360° Panorama Shots ===
 Contributors: wpxero
-Tags: elementor, shortcode, gutenberg, 360, 360 degree, gallery, image, panorama, tour
-Stable tag: 1.2.0
-Requires PHP: 7.0.0
-Requires at least: 5.0.0
-Tested up to: 6.4.2
+Tags: elementor, shortcode, gutenberg, 360, panorama, gallery, image, virtual tour
+Stable tag: 1.3.0
+Requires PHP: 7.0
+Requires at least: 5.0
+Tested up to: 6.7
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Elementor requires at least: 3.0.0
-Elementor tested up to: 3.19.0
-
-Photo Sphere Viewer is an amazing plugin that creates  360° panorama shots out of any kind of picture. This plugin supports any kind of panoramic file such as .jpeg, .png, .mp4, and so on. the great thing is you can use it anywhere in WordPress using shortcode, Elementor Widgets, and Gutenberg Blocks.
-
+Donate Link: https://wpxero.com/pricing/
+Elementor requires at least: 3.0
+Elementor tested up to: 3.25.1
 
 == Description ==
-Photo Sphere Viewer renders 360° panoramas shots with Photo Sphere, the new camera mode of Android 4.2 Jelly Bean, and above. It also supports cube panoramas. It works with touch screens too!
+📸 **Photo Sphere Viewer** is a powerful WordPress plugin for rendering 360° panoramas from various image and video formats, including JPEG, PNG, and MP4. With compatibility for both Elementor Widgets and Gutenberg Blocks, you can display immersive panoramic experiences anywhere on your WordPress site, whether on posts, pages, widget areas, or WooCommerce product pages. With no coding skills required, it’s easy for anyone to enhance their site with captivating 360° views.
 
-This plugin is very easy to use and anyone can use it without any coding knowledge.
-You can embed any panoramic photos, and videos in Posts, Pages, Widget areas, and WooCommerce product pages. It comes with everything you need to make the most of your panoramic pictures.
+== 🎯 Features ==
+- **Multiple Display Options:** Use Elementor Widget or WordPress Shortcode
+- **Customizable Controls:** Adjust field of view, zoom, dimensions, and more
+- **Responsive and Interactive:** Works seamlessly on touch screens and desktops
+- **Compatibility:** Works with the latest WordPress and Elementor versions
+- **Easy Installation:** Quickly add and configure your 360° panoramas
 
+### 🔧 How to Use
 
+#### 1. Using Elementor Widget
+1. Open the Elementor editor and insert the **Photo Sphere Viewer** widget.
+2. Customize settings in the **Content** and **Style** tabs:
+   - **Content Tab:** Adjust height, width, captions, and more.
+   - **Controls:** Set field of view, zoom levels, and enable/disable specific actions.
+   - **Advanced Controls:** Control speeds for mouse, movement, and zoom interactions.
+   - **Style Tab:** Customize appearance with color, border, and typography settings.
 
-== You can use this plugin in two ways ==
-    * Using Elementor widget
-    * Using WordPress default Shortcode
-We will show you both ways of applying this feature in action.
+#### 2. Using WordPress Shortcode
+Use the Photo Sphere Viewer shortcode directly in the Gutenberg editor for easy insertion without Elementor. Insert the following code in a Shortcode block:
+`[photo_sphere_viewer]`
 
-= Using Elementor widget=
-1. Inserting widget
-2. Find the Photo Sphere Viewer widget from the widget menu and drag it inside the page.
-Content tab
-3. The Content tab has the base settings for the layout of the content. There are two sections here.
+Customize further by adding attributes to the shortcode. Example:
+`[photo_sphere_viewer caption="Stunning Panorama" width="100" height="80"]`
 
-=Content=
-Here, you can adjust the image height & width by the scrollbars on the top of the menu. There is a caption field below that. Then comes the Image field.
+**Shortcode Options:**
+- **image:** URL of the panorama image
+- **caption:** Add a custom caption
+- **navbar:** Add or remove features like autorotate, fullscreen, download, etc.
+- **width/height:** Adjust dimensions
+- **zoom/fov:** Control default zoom and field of view
+- **Advanced Options:** Customize settings like rotation speed, fisheye effect, mouse controls, etc.
 
-At the end of the section, you can see a field named Navbar where you can select from a number of specified options (download, fullscreen). You can see the chosen option at the navbar of the image.
-Controls
+== 🚀 Installation ==
 
-Go to Content> Controls
-The controls section has two parts. The Standard section has options for FoV (field of view), Zoom level, image dimension, and a bunch of switchers. Turning on/off these switchers will affect specific actions.
+1. Download the plugin as a .zip file.
+2. In the WordPress Admin Panel, navigate to **Plugins > Add New**.
+3. Click on **Upload Plugin**, choose the .zip file, and click **Install Now**.
+4. After installation, click **Activate** to enable the plugin on your site.
 
-The Advanced section has speed controls for mouse, move, and zoom.
+== Frequently Asked Questions ==
 
-=Style tab=
-With the style tab, you can customize the appearance of the content by color, border, etc.
-Navbar
+**Q1: What types of files are supported by Photo Sphere Viewer?**
+A: Photo Sphere Viewer supports JPEG, PNG, MP4, and other common panoramic formats.
 
-Here, you can change the color, typography, and alignment of the navbar.
+**Q2: Can I use this plugin without Elementor?**
+A: Yes, the plugin works with both Elementor and Gutenberg. You can use the shortcode feature directly in the Gutenberg editor.
 
-==Using WordPress default Shortcode==
-You can use Photo Sphere Viewer using the shortcode. For this, you don’t have to go inside the Elementor page editor, just the default Gutenberg page editor will do.
+**Q3: How do I adjust the zoom and field of view?**
+A: Use the Elementor widget’s **Controls** tab or set options directly in the shortcode to customize zoom, field of view, and other controls.
 
-Open a page in Gutenberg editor and insert the Shortcode widget. Then insert the following lines:
-[photo_sphere_viewer]
-You can summon every function this widget has inside the specific commands in the shortcode. For example, if you want to change the caption, you have to insert this code:
-[photo_sphere_viewer caption="This is new caption"]
-Similar to the command above, you can enter these texts below for the corresponding functions.
-image="bdthemes-photo-sphere-viewer/assets/img/photo-sphere-viewer.jpg"
-caption="New Caption"
-navbar="autorotate,download,caption,fullscreen,..."
-width="100"
-height="80"
-min_fov="30"
-max_fov="90"
-default_zoom_lavel="50"
-default_longitude="0"
-default_latitude="0"
-longitude_range="0"
-latitude_range="0"
-autorotate_delay="20"
-autorotate_speed="10"
-fish_eye="no"
-mouse_wheel="yes"
-mousewheel_ctrl_key="no"
-mouse_move="yes"
-touch_move_two_fingers="yes"
-capture_cursor="no"
-move_speed="1"
-mouse_wheel_speed="1"
-zoom_button_increment="2"
-canvas_background="#333"
-Note: Use space before entering a new command. You can use any kind of image from any resource.
+**Q4: Is Photo Sphere Viewer mobile responsive?**
+A: Yes, it is fully responsive and works seamlessly on touch screens.
 
-== Installation ==
-1. Download the plugin.
-2. From the WordPress Admin Panel, click on Plugins => Add New.
-3. Click on Upload, so you can directly upload your plugin zip file.
-4. Use the browse button to select the plugin zip file that was downloaded, and then click on Install Now.
-5. Once installed, click "Activate".
+== Screenshots ==
+
+1. 📷 **Panorama in Elementor** – Showcasing a 360° panorama displayed using Elementor.
+2. 🛠 **Settings Panel** – Photo Sphere Viewer settings panel in Elementor for customizing panorama display options.
+3. 🔤 **Shortcode Example** – Using the Photo Sphere Viewer shortcode in Gutenberg.
+4. 📱 **Responsive Preview** – Panorama view on mobile and touch devices.
+
+==  Upgrade Notice ==
+
+**1.3.0**
+Upgrade to ensure compatibility with the latest WordPress and Elementor versions.
+
+**1.1.0**
+Improved compatibility with Elementor’s latest updates.
 
 == Changelog ==
 
-=2.0.0=
-* WordPress and Elementor latest version compatibility issue fixed
+**1.3.0**
+- Compatibility updates for the latest WordPress and Elementor versions
 
-=1.1.0=
-* Elementor Latest Version compatibility issue fixed
+**1.1.0**
+- Enhanced Elementor compatibility
 
-=1.0.1=
-* Shortcode Features Added
+**1.0.1**
+- Added shortcode support
 
-=1.0.0=
-* Initial Release
+**1.0.0**
+- Initial release

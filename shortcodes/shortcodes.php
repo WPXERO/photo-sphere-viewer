@@ -29,7 +29,7 @@ function photo_sphere_viewer_callback($atts) {
         'canvas_background'      => '#333',
     ];
     $atts             = shortcode_atts($default, $atts, 'photo_sphere_viewer');
-    $id               = wp_unique_id('bdt-psv-container-');
+    $id               = wp_unique_id('xero-psv-container-');
     $navbar_options   = explode(',', $atts['navbar']);
     $autorotate       = ($atts['autorotate_delay'] !== '') ? $atts['autorotate_delay'] : false;
     $autorotate_speed = ($atts['autorotate_speed'] !== '') ? (float) ($atts['autorotate_speed'] / 100) : 0.2;
@@ -65,6 +65,6 @@ function photo_sphere_viewer_callback($atts) {
             'canvasBackground'    => $atts['canvas_background'],
         ])),
     ];
-    return "<div class='bdt-psv-container'><div id='" . esc_attr($id) . "' data-settings='" . esc_attr($data_settings[0]) . "'></div></div>";
+    return "<div class='xero-psv-container'><div id='" . esc_attr($id) . "' data-settings='" . esc_attr($data_settings[0]) . "'></div></div>";
 }
 add_shortcode('photo_sphere_viewer', 'photo_sphere_viewer_callback');

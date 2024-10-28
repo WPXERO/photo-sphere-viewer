@@ -20,7 +20,7 @@
 
 
 // init shortcodes scripts
-var PSV_Container = document.querySelectorAll(".bdt-psv-container");
+var PSV_Container = document.querySelectorAll(".xero-psv-container");
 for (let i = 0; i < PSV_Container.length; i++) {
   let PSV_ID = PSV_Container[i].firstElementChild.getAttribute("id");
   PSV_ID = document.getElementById(PSV_ID);

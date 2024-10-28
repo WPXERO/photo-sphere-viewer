@@ -4,14 +4,14 @@
  * Plugin Name: Photo Sphere Viewer
  * Plugin URI: https://wordpress.org/plugins/photo-sphere-viewer/
  * Description: Photo Sphere Viewer renders 360° panoramas shots with Photo Sphere, the new camera mode of Android 4.2 Jelly Bean and above. It also supports cube panoramas.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: WPXERO
  * Author URI: https://github.com/wpxero/
  * Text Domain: photo-sphere-viewer
  * License: GPL3
  * Domain Path: /languages/
  * Elementor requires at least: 3.0.0
- * Elementor tested up to: 3.16.4
+ * Elementor tested up to: 3.25.1
  */
 
 
@@ -25,7 +25,7 @@ if (!defined('ABSPATH')) {
 
 
 // Some pre define value for easy use
-define('PSV_VER', '1.2.0');
+define('PSV_VER', '1.3.0');
 define('PSV__FILE__', __FILE__);
 define('PSV_URL', plugins_url('/', PSV__FILE__));
 define('PSV_ASSETS_URL', PSV_URL . 'assets/');
@@ -88,9 +88,9 @@ final class PhotoSphereViewer {
 
         $message = sprintf(
             /* translators: 1: Photo Sphere Viewer 2: PHP 3: Required PHP version */
-            esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'bdthemes-live-copy-paste'),
-            '<strong>' . esc_html__('Photo Sphere Viewer', 'bdthemes-live-copy-paste') . '</strong>',
-            '<strong>' . esc_html__('PHP', 'bdthemes-live-copy-paste') . '</strong>',
+            esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'photo-sphere-viewer'),
+            '<strong>' . esc_html__('Photo Sphere Viewer', 'photo-sphere-viewer') . '</strong>',
+            '<strong>' . esc_html__('PHP', 'photo-sphere-viewer') . '</strong>',
             self::MINIMUM_PHP_VERSION
         );
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
@@ -104,9 +104,9 @@ final class PhotoSphereViewer {
 
         $message = sprintf(
             /* translators: 1: Photo Sphere Viewer 2: Elementor 3: Required Elementor version */
-            esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'bdthemes-live-copy-paste'),
-            '<strong>' . esc_html__('Photo Sphere Viewer', 'bdthemes-live-copy-paste') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'bdthemes-live-copy-paste') . '</strong>',
+            esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'photo-sphere-viewer'),
+            '<strong>' . esc_html__('Photo Sphere Viewer', 'photo-sphere-viewer') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'photo-sphere-viewer') . '</strong>',
             self::MINIMUM_ELEMENTOR_VERSION
         );
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
@@ -120,9 +120,9 @@ final class PhotoSphereViewer {
 
         $message = sprintf(
             /* translators: 1: Photo Sphere Viewer 2: Elementor */
-            esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'bdthemes-live-copy-paste'),
-            '<strong>' . esc_html__('Photo Sphere Viewer', 'bdthemes-live-copy-paste') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'bdthemes-live-copy-paste') . '</strong>'
+            esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'photo-sphere-viewer'),
+            '<strong>' . esc_html__('Photo Sphere Viewer', 'photo-sphere-viewer') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'photo-sphere-viewer') . '</strong>'
         );
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
     }
