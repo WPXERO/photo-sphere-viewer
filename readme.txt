@@ -1,6 +1,7 @@
 === Photo Sphere Viewer – Render Stunning 360° Panorama Shots ===
 Contributors: wpxero
 Tags: 360, panorama, gallery, 360 degree, virtual tour
+Version: 1.3.2
 Stable tag: 1.3.2
 Requires PHP: 7.0
 Requires at least: 5.0
