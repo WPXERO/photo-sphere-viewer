@@ -4,14 +4,14 @@
  * Plugin Name: Photo Sphere Viewer
  * Plugin URI: https://wordpress.org/plugins/photo-sphere-viewer/
  * Description: Photo Sphere Viewer renders 360° panoramas shots with Photo Sphere, the new camera mode of Android 4.2 Jelly Bean and above. It also supports cube panoramas.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: WPXERO
  * Author URI: https://github.com/wpxero/
  * Text Domain: photo-sphere-viewer
  * License: GPL3
  * Domain Path: /languages/
  * Elementor requires at least: 3.0.0
- * Elementor tested up to: 3.25.1
+ * Elementor tested up to: 3.26.2
  */
 
 
@@ -25,10 +25,11 @@ if (!defined('ABSPATH')) {
 
 
 // Some pre define value for easy use
-define('PSV_VER', '1.3.0');
+define('PSV_VER', '1.3.1');
 define('PSV__FILE__', __FILE__);
 define('PSV_URL', plugins_url('/', PSV__FILE__));
 define('PSV_ASSETS_URL', PSV_URL . 'assets/');
+define('PSV_PATH', plugin_dir_path(PSV__FILE__));
 
 
 final class PhotoSphereViewer {
@@ -55,6 +56,7 @@ final class PhotoSphereViewer {
     public function init() {
         load_plugin_textdomain('photo-sphere-viewer', false, plugin_dir_path(__FILE__) . '/languages');
         require(dirname(__FILE__) . '/shortcodes/shortcodes.php');
+        add_action('admin_init', [$this, 'wpxero_data_insights']);
 
         // load assets
         add_action('wp_enqueue_scripts', [$this, 'assets_enqueue']);
@@ -162,6 +164,34 @@ final class PhotoSphereViewer {
 
         $widgets_manager->register(new \Elementor\Photo_Sphere_Viewer());
     }
+    /**
+     * ! Data Insights
+     */
+    public function wpxero_data_insights() {
+        require_once PSV_PATH . 'includes/analytics/init.php';
+        wpxero_analytics_init();
+        // wpxero_analytics_init();
+    }
+    public function xero_photo_sphere_viewer_activate() {
+        // Activation code here
+    }
+    public function xero_photo_sphere_viewer_deactivate() {
+        // Deactivation code here
+        require_once PSV_PATH . 'includes/analytics/init.php';
+
+        // Add action to show feedback form before deactivation
+        add_action('admin_footer', function () {
+            $analytics = wpxero_analytics_init();
+
+            // Show the feedback form
+            $analytics->deactivate_feedback_form();
+        });
+    }
 }
 
+
 PhotoSphereViewer::instance();
+// Include the SDK
+// activate and deactivate
+register_activation_hook(__FILE__, array(PhotoSphereViewer::instance(), 'xero_photo_sphere_viewer_activate'));
+register_deactivation_hook(__FILE__, array(PhotoSphereViewer::instance(), 'xero_photo_sphere_viewer_deactivate'));

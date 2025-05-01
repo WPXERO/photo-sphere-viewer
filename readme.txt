@@ -1,15 +1,15 @@
 === Photo Sphere Viewer – Render Stunning 360° Panorama Shots ===
 Contributors: wpxero
 Tags: elementor, shortcode, gutenberg, 360, panorama, gallery, image, virtual tour
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 Requires PHP: 7.0
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.7.1
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Donate Link: https://wpxero.com/pricing/
 Elementor requires at least: 3.0
-Elementor tested up to: 3.25.1
+Elementor tested up to: 3.26.2
 
 == Description ==
 📸 **Photo Sphere Viewer** is a powerful WordPress plugin for rendering 360° panoramas from various image and video formats, including JPEG, PNG, and MP4. With compatibility for both Elementor Widgets and Gutenberg Blocks, you can display immersive panoramic experiences anywhere on your WordPress site, whether on posts, pages, widget areas, or WooCommerce product pages. With no coding skills required, it’s easy for anyone to enhance their site with captivating 360° views.
@@ -83,6 +83,10 @@ Upgrade to ensure compatibility with the latest WordPress and Elementor versions
 Improved compatibility with Elementor’s latest updates.
 
 == Changelog ==
+
+**1.3.1**
+- System Improved
+- Compatibility updates for the latest WordPress and Elementor version
 
 **1.3.0**
 - Compatibility updates for the latest WordPress and Elementor versions
