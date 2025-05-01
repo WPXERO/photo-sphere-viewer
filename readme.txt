@@ -1,15 +1,15 @@
 === Photo Sphere Viewer – Render Stunning 360° Panorama Shots ===
 Contributors: wpxero
-Tags: elementor, shortcode, gutenberg, 360, panorama, gallery, image, virtual tour
-Stable tag: 1.3.1
+Tags: 360, panorama, gallery, 360 degree, virtual tour
+Stable tag: 1.3.2
 Requires PHP: 7.0
 Requires at least: 5.0
-Tested up to: 6.7.1
+Tested up to: 6.8.1
 License: GPL3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Donate Link: https://wpxero.com/pricing/
 Elementor requires at least: 3.0
-Elementor tested up to: 3.26.2
+Elementor tested up to: 3.28.4
 
 == Description ==
 📸 **Photo Sphere Viewer** is a powerful WordPress plugin for rendering 360° panoramas from various image and video formats, including JPEG, PNG, and MP4. With compatibility for both Elementor Widgets and Gutenberg Blocks, you can display immersive panoramic experiences anywhere on your WordPress site, whether on posts, pages, widget areas, or WooCommerce product pages. With no coding skills required, it’s easy for anyone to enhance their site with captivating 360° views.
@@ -76,26 +76,29 @@ A: Yes, it is fully responsive and works seamlessly on touch screens.
 
 ==  Upgrade Notice ==
 
-**1.3.0**
+**1.3.2**
 Upgrade to ensure compatibility with the latest WordPress and Elementor versions.
-
-**1.1.0**
-Improved compatibility with Elementor’s latest updates.
 
 == Changelog ==
 
-**1.3.1**
-- System Improved
-- Compatibility updates for the latest WordPress and Elementor version
+## 1.3.2 [01st May 2025]
+- WordPress and Elementor latest version compatibility issue fixed
 
-**1.3.0**
+## 1.3.1 [21st December 2024]
+- System Improved.
 - Compatibility updates for the latest WordPress and Elementor versions
 
-**1.1.0**
-- Enhanced Elementor compatibility
+## 1.3.0 [09th October 2024]
+- Compatibility updates for the latest WordPress and Elementor versions
 
-**1.0.1**
-- Added shortcode support
+## 1.2.0 [09th October 2023]
+- WordPress and Elementor latest version compatibility issue fixed
 
-**1.0.0**
-- Initial release
+## 1.1.0 [15th March 2023]
+-Elementor latest version compatibility issue fixed
+
+## 1.0.1 [15th May 2022]
+- Shortcode Features Added
+
+## 1.0.0 [06th February 2022]
+- Initial Release
