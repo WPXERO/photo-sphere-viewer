@@ -56,7 +56,6 @@ final class PhotoSphereViewer {
     public function init() {
         load_plugin_textdomain('photo-sphere-viewer', false, plugin_dir_path(__FILE__) . '/languages');
         require(dirname(__FILE__) . '/shortcodes/shortcodes.php');
-        add_action('admin_init', [$this, 'wpxero_data_insights']);
 
         // load assets
         add_action('wp_enqueue_scripts', [$this, 'assets_enqueue']);
@@ -164,28 +163,13 @@ final class PhotoSphereViewer {
 
         $widgets_manager->register(new \Elementor\Photo_Sphere_Viewer());
     }
-    /**
-     * ! Data Insights
-     */
-    public function wpxero_data_insights() {
-        require_once PSV_PATH . 'includes/analytics/init.php';
-        wpxero_analytics_init();
-        // wpxero_analytics_init();
-    }
+
     public function xero_photo_sphere_viewer_activate() {
         // Activation code here
     }
     public function xero_photo_sphere_viewer_deactivate() {
         // Deactivation code here
-        require_once PSV_PATH . 'includes/analytics/init.php';
 
-        // Add action to show feedback form before deactivation
-        add_action('admin_footer', function () {
-            $analytics = wpxero_analytics_init();
-
-            // Show the feedback form
-            $analytics->deactivate_feedback_form();
-        });
     }
 }
 

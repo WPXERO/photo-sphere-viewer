@@ -33,19 +33,79 @@ Elementor tested up to: 3.28.4
    - **Style Tab:** Customize appearance with color, border, and typography settings.
 
 #### 2. Using WordPress Shortcode
-Use the Photo Sphere Viewer shortcode directly in the Gutenberg editor for easy insertion without Elementor. Insert the following code in a Shortcode block:
+Use the Photo Sphere Viewer shortcode directly in the Gutenberg editor (Shortcode block) or anywhere shortcodes are supported.
+
+Basic usage:
+
 `[photo_sphere_viewer]`
 
-Customize further by adding attributes to the shortcode. Example:
-`[photo_sphere_viewer caption="Stunning Panorama" width="100" height="80"]`
+Example with a few options:
 
-**Shortcode Options:**
-- **image:** URL of the panorama image
-- **caption:** Add a custom caption
-- **navbar:** Add or remove features like autorotate, fullscreen, download, etc.
-- **width/height:** Adjust dimensions
-- **zoom/fov:** Control default zoom and field of view
-- **Advanced Options:** Customize settings like rotation speed, fisheye effect, mouse controls, etc.
+`[photo_sphere_viewer image="https://example.com/panorama.jpg" caption="Stunning Panorama" width="100" height="80"]`
+
+Examples with advanced options:
+
+`[photo_sphere_viewer image="https://example.com/pano.jpg" navbar="autorotate,download,caption,fullscreen" min_fov="30" max_fov="90" default_zoom_lavel="50" autorotate_delay="1500" autorotate_speed="20" fish_eye="no" mouse_wheel="yes" mousewheel_ctrl_key="no" mouse_move="yes" touch_move_two_fingers="yes" capture_cursor="no" move_speed="1" mouse_wheel_speed="1" zoom_button_increment="2" canvas_background="#333"]`
+
+**All Shortcode Attributes** (with defaults):
+
+  - **image** (string) — URL of the panorama image.
+  - Default: plugin demo image `bryce-canyon-national-park.jpg`.
+
+- **caption** (string) — Caption text displayed in the viewer.
+  - Default: "From shortcodes".
+
+- **navbar** (comma-separated list) — Controls shown in the toolbar.
+  - Default: `autorotate,download,caption,fullscreen`
+  - Allowed items: `autorotate`, `download`, `caption`, `fullscreen`.
+- **width** (number) — Viewer width as percentage of the container.
+  - Default: `100` (interpreted as `100%`).
+- **height** (number) — Viewer height in viewport height units.
+  - Default: `80` (interpreted as `80vh`).
+- **min_fov** (number) — Minimum field of view.
+  - Default: `30`.
+- **max_fov** (number) — Maximum field of view.
+  - Default: `90`.
+- **default_zoom_lavel** (number) — Initial zoom level.
+  - Default: `50`.
+- **default_longitude** (number) — Initial longitude (radians or degrees depending on core library config).
+  - Default: `0`.
+- **default_latitude** (number) — Initial latitude.
+  - Default: `0`.
+- **longitude_range** (number|array) — Limit horizontal range. Use `0` for no limit.
+  - Default: `0`.
+- **latitude_range** (number|array) — Limit vertical range. Use `0` for no limit.
+  - Default: `0`.
+- **autorotate_delay** (number) — Delay in ms before auto-rotate starts. Empty disables.
+  - Default: empty (disabled).
+- **autorotate_speed** (number) — Auto-rotate speed; higher is faster.
+  - Default: `10` (internally scaled to the library’s expected value).
+- **fish_eye** (yes|no) — Enable fisheye effect.
+  - Default: `no`.
+- **mouse_wheel** (yes|no) — Enable zoom with mouse wheel.
+  - Default: `yes`.
+- **mousewheel_ctrl_key** (yes|no) — Require Ctrl key for mouse wheel.
+  - Default: `no`.
+- **mouse_move** (yes|no) — Enable mouse move (drag) controls.
+  - Default: `yes`.
+- **touch_move_two_fingers** (yes|no) — Require two fingers to move on touch.
+  - Default: `yes`.
+- **capture_cursor** (yes|no) — Capture cursor while interacting.
+  - Default: `no`.
+- **move_speed** (number) — Move speed multiplier.
+  - Default: `1`.
+- **mouse_wheel_speed** (number) — Mouse wheel zoom speed multiplier.
+  - Default: `1`.
+- **zoom_button_increment** (number) — Zoom step for +/- buttons.
+  - Default: `2`.
+- **canvas_background** (CSS color) — Viewer canvas background color.
+  - Default: `#333`.
+
+
+Notes:
+- Width and height are interpreted as `%` and `vh` respectively by the viewer.
+- Boolean-like attributes accept `yes` or `no`.
+- If `autorotate_delay` is empty, auto-rotate is disabled regardless of `autorotate_speed`.
 
 == 🚀 Installation ==
 
