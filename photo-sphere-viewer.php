@@ -4,7 +4,7 @@
  * Plugin Name: Photo Sphere Viewer
  * Plugin URI: https://wordpress.org/plugins/photo-sphere-viewer/
  * Description: Photo Sphere Viewer renders 360° panoramas shots with Photo Sphere, the new camera mode of Android 4.2 Jelly Bean and above. It also supports cube panoramas.
- * Version: 1.3.2
+ * Version: 1.3.3
  * Author: WPXERO
  * Author URI: https://github.com/wpxero/
  * Text Domain: photo-sphere-viewer
@@ -25,7 +25,7 @@ if (!defined('ABSPATH')) {
 
 
 // Some pre define value for easy use
-define('PSV_VER', '1.3.2');
+define('PSV_VER', '1.3.3');
 define('PSV__FILE__', __FILE__);
 define('PSV_URL', plugins_url('/', PSV__FILE__));
 define('PSV_ASSETS_URL', PSV_URL . 'assets/');

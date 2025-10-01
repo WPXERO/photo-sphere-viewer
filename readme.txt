@@ -1,8 +1,8 @@
 === Photo Sphere Viewer – Render Stunning 360° Panorama Shots ===
 Contributors: wpxero
 Tags: 360, panorama, gallery, 360 degree, virtual tour
-Version: 1.3.2
-Stable tag: 1.3.2
+Version: 1.3.3
+Stable tag: 1.3.3
 Requires PHP: 7.0
 Requires at least: 5.0
 Tested up to: 6.8.1
@@ -137,10 +137,14 @@ A: Yes, it is fully responsive and works seamlessly on touch screens.
 
 ==  Upgrade Notice ==
 
-**1.3.2**
+**1.3.3**
 Upgrade to ensure compatibility with the latest WordPress and Elementor versions.
 
 == Changelog ==
+
+## 1.3.3 [01st October 2025]
+- WordPress and Elementor latest version compatibility issue fixed
+- Upgrade the documentation of the plugin
 
 ## 1.3.2 [01st May 2025]
 - WordPress and Elementor latest version compatibility issue fixed
